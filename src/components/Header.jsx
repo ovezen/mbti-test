@@ -1,24 +1,26 @@
-import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+import LoginNav from "./LoginNav";
+import LogoutNav from "./LogoutLav";
 
-const LayOut = () => {
+const Header = () => {
+  // 로컬 스토리지에서 사용자 정보 확인
+  const user = JSON.parse(localStorage.getItem("user"));
+  const isLoggedIn = !!user; // user 데이터
+
   return (
-    <div>
-      <header>
-        <a href="/">홈</a>
-        <a href="/profile">프로필</a>
-        <a href="/test">테스트</a>
-        <a href="/results">결과 보기</a>
-        <button>로그아웃</button>
+    <>
+      <header className="bg-primary-color p-4 shadow-md">
+        <div>
+          <div>
+            <Link to="/" className="text-lg font-semibold">
+              Home
+            </Link>
+          </div>
+          <div>{isLoggedIn ? <LoginNav /> : <LogoutNav />}</div>
+        </div>
       </header>
-      <main>
-        {/* 자식 컴포넌트를 렌더링할 outlet */}
-        <Outlet />
-      </main>
-      <footer>
-        <p>footer</p>
-      </footer>
-    </div>
+    </>
   );
 };
 
-export default LayOut;
+export default Header;

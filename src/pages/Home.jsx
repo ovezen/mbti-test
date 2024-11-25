@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 const Home = () => {
   return (
     <div className="h-full bg-gray-100 flex flex-col justify-between">
       {/* header 들어갈 곳 */}
+      <Header />
       <header />
       <div className="container mx-auto pt-10 main">
         <div className="w-full flex flex-col items-center justify-center bg-gray-100">
@@ -47,7 +49,7 @@ const Home = () => {
           </div>
         </div>
 
-        <Link to="/test">로그인하기</Link>
+        <Link to="/test">내 성격 알아보러 가기</Link>
       </div>
     </div>
   );
