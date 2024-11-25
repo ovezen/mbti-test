@@ -3,6 +3,8 @@ import AuthForm from "../components/AuthForm";
 
 const Login = () => {
   return (
+    <>
+      {/* header 들어갈 곳 */}
     <div>
       <div>
         <h1>로그인</h1>
@@ -14,6 +16,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
