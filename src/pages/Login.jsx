@@ -3,6 +3,7 @@ import AuthForm from "../components/AuthForm";
 import { login } from "../api/auth";
 import { toast } from "react-toastify";
 import Header from "../components/Header";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const navigate = useNavigate();

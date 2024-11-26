@@ -3,6 +3,8 @@ import AuthForm from "../components/AuthForm";
 import { register } from "../api/auth";
 import { toast } from "react-toastify";
 import Header from "../components/Header";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Signup = () => {
   const navigate = useNavigate();
