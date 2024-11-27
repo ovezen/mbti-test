@@ -46,8 +46,7 @@ const TestResultPage = () => {
   return (
     <>
       <Header />
-      <div>
-        TestResultPage
+      <div className="w-full flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-8">
         <TestResultList
           results={results}
           onDelete={handleDelete}

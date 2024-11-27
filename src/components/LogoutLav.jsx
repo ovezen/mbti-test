@@ -4,7 +4,7 @@ const LoggedOutNav = () => {
   return (
     <Link
       to="/login"
-      className="text-gray-800 hover:text-red-600 font-semibold text-lg"
+      className="text-white hover:text-red-600 font-semibold text-lg"
     >
       로그인
     </Link>

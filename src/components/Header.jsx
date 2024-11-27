@@ -12,7 +12,7 @@ const Header = () => {
       <header className="bg-primary-color p-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center text-white">
           <div>
-            <Link to="/" className="text-lg font-semibold">
+            <Link to="/" className="text-lg font-semibold hover:text-red-600">
               Home
             </Link>
           </div>

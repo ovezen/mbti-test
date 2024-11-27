@@ -23,7 +23,7 @@ const Login = () => {
       {/* header 들어갈 곳 */}
       <Header />
       <div className="w-full flex flex-col items-center justify-center bg-gray-100">
-        <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
+        <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full mt-10">
           <h1 className="text-3xl font-bold text-primary-color mb-6 text-center">
             로그인
           </h1>

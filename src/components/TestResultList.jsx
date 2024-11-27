@@ -9,7 +9,7 @@ const TestResultList = ({ results, currentUserId, onUpdate, onDelete }) => {
   const visibleResults = results.filter((result) => result.visibility || result.userId === currentUserId);
   
   return (
-    <div>
+    <div className="bg-white max-w-2xl w-full mt-10 mb-10 space-y-4">
       {visibleResults.map((result) => (
         <TestResultItem
           key={result.id}
