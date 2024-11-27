@@ -4,7 +4,6 @@ import Header from "../components/Header";
 const Home = () => {
   return (
     <div className="h-full bg-gray-100 flex flex-col justify-between">
-      {/* header 들어갈 곳 */}
       <Header />
       <header />
       <div className="container mx-auto pt-10 main">

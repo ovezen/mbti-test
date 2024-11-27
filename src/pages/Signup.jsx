@@ -22,7 +22,6 @@ const Signup = () => {
 
   return (
     <>
-      {/* header 들어갈 곳 */}
       <Header />
       <div className="flex flex-col items-center justify-center bg-gray-100 mt-10">
         <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">

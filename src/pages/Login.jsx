@@ -20,7 +20,6 @@ const Login = () => {
   }
   return (
     <>
-      {/* header 들어갈 곳 */}
       <Header />
       <div className="w-full flex flex-col items-center justify-center bg-gray-100">
         <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full mt-10">

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// API 인스턴스 생성
+// API 인스턴스
 const API = axios.create({
   baseURL: "https://moneyfulpublicpolicy.co.kr",
   headers: {
@@ -8,12 +8,12 @@ const API = axios.create({
   },
 });
 
-// 요청 인터셉터
+// 인터셉터
 API.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("token"); // 토큰 가져오기
+    const token = localStorage.getItem("token"); // token
     if (token) {
-      config.headers.Authorization = `Bearer ${token}`; // Authorization 헤더 추가
+      config.headers.Authorization = `Bearer ${token}`; // Authorization
     }
     return config;
   },

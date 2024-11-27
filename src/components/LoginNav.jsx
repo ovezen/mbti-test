@@ -7,8 +7,8 @@ const LoggedInNav = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("user"); // 사용자 정보 삭제
-    localStorage.removeItem("token"); // 사용자 정보 삭제
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
     toast.success("로그아웃이 완료되었습니다.");
     navigate("/login");
   };

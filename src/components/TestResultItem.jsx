@@ -46,6 +46,5 @@ const TestResultItem = ({ results, onUpdate, onDelete, currentUserId }) => {
 
 export default TestResultItem;
 
-//TODO
-// createdAt 바꿔야함
-// 비공개/삭제 버튼
+// TODO
+// 1) createdAt
