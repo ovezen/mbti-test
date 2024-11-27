@@ -14,22 +14,22 @@ const LoggedInNav = () => {
   };
 
   return (
-    <>
+    <div className="space-x-4">
       <Link
         to="/profile"
-        className="text-gray-800 hover:text-red-600 font-semibold text-lg"
+        className="text-white hover:text-red-600 font-semibold text-lg"
       >
         프로필
       </Link>
       <Link
         to="/test"
-        className="text-gray-800 hover:text-red-600 font-semibold text-lg"
+        className="text-white hover:text-red-600 font-semibold text-lg"
       >
         테스트
       </Link>
       <Link
         to="/result"
-        className="text-gray-800 hover:text-red-600 font-semibold text-lg"
+        className="text-white hover:text-red-600 font-semibold text-lg"
       >
         결과 보기
       </Link>
@@ -39,7 +39,7 @@ const LoggedInNav = () => {
       >
         로그아웃
       </button>
-    </>
+    </div>
   );
 };
 

@@ -1,7 +1,8 @@
 import TestResultList from "../components/TestResultList";
 import Header from "../components/Header";
 import { useEffect, useState } from "react";
-import { getTestResults } from "../api/testResults";
+import { deleteTestResult, getTestResults } from "../api/testResults";
+import { toast } from "react-toastify";
 
 const TestResultPage = () => {
   const [results, setResults] = useState([]);
@@ -12,13 +13,35 @@ const TestResultPage = () => {
     const fetchTestResults = async () => {
       try {
         const response = await getTestResults();
-        setResults(response)
+        setResults(response);
       } catch (error) {
         console.error(error);
       }
     };
     fetchTestResults();
   }, []);
+
+  const handleDelete = async (id) => {
+    try {
+      await deleteTestResult(id);
+
+      setResults((prevResults) => {
+        return prevResults.filter((result) => result.id !== id);
+      });
+      toast.success("삭제되었습니다.");
+    } catch (error) {
+      toast.error("삭제에 실패했습니다.");
+      console.error("삭제 중 오류 발생:", error);
+    }
+  };
+
+  const handleUpdate = (id, updatedResult) => {
+    console.log("업데이트 전 ", results);
+    setResults((prevResults) =>
+      prevResults.map((result) => (result.id === id ? updatedResult : result))
+    );
+    console.log("업데이트 후 ", results);
+  };
 
   return (
     <>
@@ -27,7 +50,10 @@ const TestResultPage = () => {
         TestResultPage
         <TestResultList
           results={results}
-          currentUserId={user?.userId} />
+          onDelete={handleDelete}
+          onUpdate={handleUpdate}
+          currentUserId={user?.userId}
+        />
       </div>
     </>
   );

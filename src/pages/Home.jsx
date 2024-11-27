@@ -49,7 +49,12 @@ const Home = () => {
           </div>
         </div>
 
-        <Link to="/test">내 성격 알아보러 가기</Link>
+        <Link
+          to="/test"
+          className="inline-block bg-primary-color text-white py-2 px-6 rounded-full hover:bg-secondary-color transition mb-4 hover:text-[#FF5A5F]"
+        >
+          내 성격 알아보러 가기
+        </Link>
       </div>
     </div>
   );

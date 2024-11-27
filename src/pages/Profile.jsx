@@ -22,7 +22,7 @@ const Profile = () => {
   }, []);
 
   // 닉네임 업데이트 함수
-  const handleUpdate = async (e) => {
+  const handleNickname = async (e) => {
     e.preventDefault();
     setLoading(true); // 로딩 상태 활성화
 
@@ -59,7 +59,7 @@ const Profile = () => {
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
             프로필 수정
           </h2>
-          <form onSubmit={handleUpdate}>
+          <form onSubmit={handleNickname}>
             <div className="mb-4">
               <label
                 htmlFor="nickname"

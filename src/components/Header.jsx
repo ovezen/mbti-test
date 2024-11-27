@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <>
       <header className="bg-primary-color p-4 shadow-md">
-        <div>
+        <div className="container mx-auto flex justify-between items-center text-white">
           <div>
             <Link to="/" className="text-lg font-semibold">
               Home

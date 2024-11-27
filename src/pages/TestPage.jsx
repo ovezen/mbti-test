@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import TestForm from "../components/TestForm";
 import { calculateMBTI, mbtiDescriptions } from "../utils/mbtiCalculator";
 import { createTestResult } from "../api/testResults";
+import { getProfile } from "../api/auth";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { getProfile } from "../api/auth";
 
 const TestPage = () => {
   const navigate = useNavigate();
@@ -25,6 +25,7 @@ const TestPage = () => {
 
   const handleTestSubmit = async (answers) => {
     const mbtiResult = calculateMBTI(answers);
+
     try {
       const mbtiDescription = mbtiDescriptions[mbtiResult];
       await createTestResult({
@@ -32,7 +33,7 @@ const TestPage = () => {
         nickname: user.nickname,
         result: mbtiResult,
         description: mbtiDescription,
-        visibilty: true,
+        visibility: true,
         createdAt: new Date().toISOString(),
       });
       toast.success("결과가 저장되었습니다.");

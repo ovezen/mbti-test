@@ -46,10 +46,10 @@ export const login = async (userid, password) => {
 // 프로필 정보 조회 - 토큰.... 토큰가져와
 export const getProfile = async () => {
   try {
-    const token = localStorage.getItem("token")
+    const token = localStorage.getItem("token");
     const response = await API.get("/user", {
       headers: {
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token}`,
       },
     });
     return response.data;
