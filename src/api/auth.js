@@ -43,10 +43,15 @@ export const login = async (userid, password) => {
   }
 };
 
-// 프로필 정보 조회
+// 프로필 정보 조회 - 토큰.... 토큰가져와
 export const getProfile = async () => {
   try {
-    const response = await API.get("/user");
+    const token = localStorage.getItem("token")
+    const response = await API.get("/user", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+    });
     return response.data;
   } catch (error) {
     console.error("Failed to fetch profile:", error.response.data);

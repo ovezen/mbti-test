@@ -1,0 +1,52 @@
+{
+  "testResults": [
+    {
+      "id": "6e39",
+      "result": "ESTJ",
+      "visibilty": true,
+      "createdAt": "2024-11-26T08:38:55.472Z"
+    },
+    {
+      "id": "dd85",
+      "result": "ENTJ",
+      "visibilty": true,
+      "createdAt": "2024-11-26T08:40:24.050Z"
+    },
+    {
+      "id": "0e6d",
+      "result": "ESTJ",
+      "visibilty": true,
+      "createdAt": "2024-11-26T08:40:51.980Z"
+    },
+    {
+      "id": "5844",
+      "result": "ESTJ",
+      "visibilty": true,
+      "createdAt": "2024-11-26T09:28:08.748Z"
+    },
+    {
+      "id": "ffbe",
+      "result": "ENFJ",
+      "visibilty": true,
+      "createdAt": "2024-11-27T00:28:30.045Z"
+    },
+    {
+      "id": "37ed",
+      "userId": "user",
+      "nickname": "user01",
+      "result": "INTP",
+      "description": "INTP: 세상의 진리를 탐구하는 철학자! INTP는 항상 새로운 아이디어와 이론을 탐구하는 사람들입니다. 이들은 '왜?'라는 질문을 끊임없이 던지며, 세상의 모든 것을 논리적으로 이해하려고 해요. 그러나 가끔은 너무 생각에 빠져서 현실과 동떨어질 때가 있어요. 그래도 이들의 지식과 통찰력은 언제나 놀라움을 줍니다.",
+      "visibilty": true,
+      "createdAt": "2024-11-27T05:56:19.704Z"
+    },
+    {
+      "id": "b3bf",
+      "userId": "user",
+      "nickname": "user01",
+      "result": "ESFJ",
+      "description": "ESFJ: 세상의 평화를 지키는 사회적 중재자! ESFJ는 사람들과의 관계를 중시하며, '모두가 행복할 수 있다면 나도 행복해'라는 마인드를 가지고 있어요. 이들은 다른 사람들을 도와주는 데에서 진정한 기쁨을 느끼며, 언제나 주위 사람들의 요구에 민감하게 반응해요. 그러나 가끔은 너무 자신을 희생하는 경우가 있어, '내 감정도 소중해'라고 말할 필요가 있을지도 몰라요.",
+      "visibilty": true,
+      "createdAt": "2024-11-27T05:59:49.100Z"
+    }
+  ]
+}

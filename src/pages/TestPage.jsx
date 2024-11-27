@@ -1,20 +1,49 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TestForm from "../components/TestForm";
 import { calculateMBTI, mbtiDescriptions } from "../utils/mbtiCalculator";
 import { createTestResult } from "../api/testResults";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { getProfile } from "../api/auth";
 
-const TestPage = ({ user }) => {
+const TestPage = () => {
   const navigate = useNavigate();
   const [result, setResult] = useState(null);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const fetchedUser = await getProfile();
+        setUser(fetchedUser);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchUser();
+  }, []);
 
   const handleTestSubmit = async (answers) => {
     const mbtiResult = calculateMBTI(answers);
-    /* Test 결과는 mbtiResult 라는 변수에 저장이 됩니다. 이 데이터를 어떻게 API 를 이용해 처리 할 지 고민해주세요. */
+    try {
+      const mbtiDescription = mbtiDescriptions[mbtiResult];
+      await createTestResult({
+        userId: user?.id,
+        nickname: user.nickname,
+        result: mbtiResult,
+        description: mbtiDescription,
+        visibilty: true,
+        createdAt: new Date().toISOString(),
+      });
+      toast.success("결과가 저장되었습니다.");
+      setResult(mbtiResult);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleNavigateToResults = () => {
-    navigate("/results");
+    navigate("/result");
   };
 
   return (
