@@ -6,18 +6,21 @@ import Profile from "../pages/Profile";
 import TestPage from "../pages/TestPage";
 import TestResultPage from "../pages/TestResultPage";
 import ProtectedRoute from "../components/ProtectedRoute";
+import Layout from "../components/Layout";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route element={<ProtectedRoute />}>
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/test" element={<TestPage />} />
-          <Route path="/result" element={<TestResultPage />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/test" element={<TestPage />} />
+            <Route path="/result" element={<TestResultPage />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

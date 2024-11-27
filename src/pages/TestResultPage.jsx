@@ -1,5 +1,4 @@
 import TestResultList from "../components/TestResultList";
-import Header from "../components/Header";
 import { useEffect, useState } from "react";
 import { deleteTestResult, getTestResults } from "../api/testResults";
 import { toast } from "react-toastify";
@@ -45,7 +44,6 @@ const TestResultPage = () => {
 
   return (
     <>
-      <Header />
       <div className="w-full flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-8">
         <TestResultList
           results={results}

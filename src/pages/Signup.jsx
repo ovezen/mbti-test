@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthForm from "../components/AuthForm";
 import { register } from "../api/auth";
 import { toast } from "react-toastify";
-import Header from "../components/Header";
 import "react-toastify/dist/ReactToastify.css";
 
 
@@ -22,7 +21,6 @@ const Signup = () => {
 
   return (
     <>
-      <Header />
       <div className="flex flex-col items-center justify-center bg-gray-100 mt-10">
         <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
           <h1 className="text-4xl font-bold text-primary-color mb-6 text-center">

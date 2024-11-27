@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthForm from "../components/AuthForm";
 import { login } from "../api/auth";
 import { toast } from "react-toastify";
-import Header from "../components/Header";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
@@ -20,7 +19,6 @@ const Login = () => {
   }
   return (
     <>
-      <Header />
       <div className="w-full flex flex-col items-center justify-center bg-gray-100">
         <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full mt-10">
           <h1 className="text-3xl font-bold text-primary-color mb-6 text-center">

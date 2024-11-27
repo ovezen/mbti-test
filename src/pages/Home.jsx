@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
 
 const Home = () => {
   return (
     <div className="h-full bg-gray-100 flex flex-col justify-between">
-      <Header />
       <header />
       <div className="container mx-auto pt-10 main">
         <div className="w-full flex flex-col items-center justify-center bg-gray-100">
