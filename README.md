@@ -1,8 +1,31 @@
-# React + Vite
+# MBTI-TEST
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 프로젝트 소개
+**MBTI TEST**는 사용자가 자신의 MBTI 테스트 결과를 확인하고 관리할 수 있는 React 기반 웹 애플리케이션입니다. 이 프로젝트는 사용자 친화적인 UI와 테스트 및 결과 리스팅을 제공하며, Tailwind CSS를 활용해 스타일링되었습니다.
 
-Currently, two official plugins are available:
+## 🔑 주요 기능
+- **회원가입 및 로그인**: 
+  - 사용자는 이메일과 비밀번호를 통해 계정을 생성하고 로그인할 수 있습니다.
+  - 로그인한 사용자는 자신의 닉네임을 확인하고 수정할 수 있습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **MBTI 테스트**: 
+  - 20개의 질문을 통해 자신의 MBTI 성격 유형을 진단할 수 있습니다.
+
+- **결과 저장 및 관리**: 
+  - 테스트 결과를 저장하고 다른 사용자와 공유할 수 있습니다.
+  - 사용자는 자신의 결과를 삭제하거나 공개/비공개 전환 업데이트할 수 있습니다.
+
+- **반응형 디자인**:
+  - Tailwind CSS를 활용해 화면 크기에 맞게 렌더링합니다.
+
+## 🛠️ 기술 스택
+- **프론트엔드**:
+  - React: 컴포넌트 기반 설계
+  - Tailwind CSS: 빠르고 간결한 스타일링
+
+- **백엔드**:
+  - JSON 데이터 사용
+
+- **기타**:
+  - React Router: 페이지 네비게이션
+  - React Toastify: 알림 기능
