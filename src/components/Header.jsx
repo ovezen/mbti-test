@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import LoginNav from "./LoginNav";
 import LogoutNav from "./LogoutLav";
+import { useAuth } from "../context/AuthContext";
 
 const Header = () => {
   // 로컬 스토리지에서 사용자 정보 확인
-  const user = JSON.parse(localStorage.getItem("user"));
-  const isLoggedIn = !!user; // user 데이터
+  // const user = JSON.parse(localStorage.getItem("user"));
+  // const isLoggedIn = !!user; // user 데이터
+  // ----- 이제 로컬스토리지에서 불러올 필요 없음 -----//
+
+  const { isLoggedIn } = useAuth();
 
   return (
     <>

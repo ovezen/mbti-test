@@ -1,11 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import AuthForm from "../components/AuthForm";
-import { login } from "../api/auth";
 import { toast } from "react-toastify";
+import { useAuth } from "../context/AuthContext";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const navigate = useNavigate();
+  const { login } = useAuth(); // 전부 AuthContext에서 가져오면 됨
 
   const handleLogin = async (formData) => {
     try {
